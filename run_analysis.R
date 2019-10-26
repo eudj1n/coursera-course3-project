@@ -109,7 +109,7 @@ groupedData <- group_by(activity, subject, activity)
 
 ## Apply mean to summarize results
 
-resultData <- summarise_each(groupedData, funs(mean))
+resultData <- summarise_each(groupedData, list(~mean(.)))
 
 ## Save result data to result file
 
