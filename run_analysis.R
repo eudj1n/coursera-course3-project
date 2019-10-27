@@ -1,4 +1,4 @@
-# Step 0 - Download and extract data
+# Step 0 - Download and extract data and load dplyr library for processing
 
 library(dplyr)
 
@@ -110,6 +110,10 @@ groupedData <- group_by(activity, subject, activity)
 ## Apply mean to summarize results
 
 resultData <- summarise_each(groupedData, list(~mean(.)))
+
+## Check result - uncomment next line to check before result write
+
+### str(resultData)
 
 ## Save result data to result file
 
